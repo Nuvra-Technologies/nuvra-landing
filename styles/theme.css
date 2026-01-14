@@ -1,0 +1,15 @@
+:root {
+    /* Colores base (placeholders) */
+    --color-primary: #000000;
+    --color-secondary: #ffffff;
+    --color-accent: #6366f1;
+    
+    /* Texto */
+    --text-primary: #111827;
+    --text-secondary: #6b7280;
+    
+    /* Layout */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+}
