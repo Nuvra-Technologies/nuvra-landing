@@ -19,7 +19,7 @@ export default function RootLayout({
         className={`bg-white text-gray-900 antialiased`}
       >
         <Navbar />
-        <main className="pt-20">{children}</main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

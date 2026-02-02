@@ -1,4 +1,5 @@
 import { createMetadata } from "@/lib/seo";
+import QuienesSomosContent from "@/sections/quienes-somos/QuienesSomosContent";
 
 export const metadata = createMetadata({
     title: "Quiénes somos | Nuvra",
@@ -8,9 +9,5 @@ export const metadata = createMetadata({
 });
 
 export default function QuienesSomosPage() {
-    return (
-        <section>
-            {/* Quiénes somos */}
-        </section>
-    );
+    return <QuienesSomosContent />
 }

@@ -1,4 +1,7 @@
 import { Metadata } from "next";
+import Hero from "@/sections/home/Hero";
+import QuienesSomosPreview from "@/sections/home/QuienesSomosPreview";
+import EquipoPreview from "@/sections/home/EquipoPreview";
 
 export const metadata: Metadata = {
   title: "Inicio | Nuvra Technologies",
@@ -8,8 +11,10 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <section>
-      {/* Home – cuando esté terminado */}
-    </section>
+    <>
+      <Hero />
+      <QuienesSomosPreview />
+      <EquipoPreview />
+    </>
   );
 }
