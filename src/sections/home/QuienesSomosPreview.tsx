@@ -11,9 +11,6 @@ export default function QuienesSomosPreview() {
                     <h3 className="font-semibold bg-gradient-to-r from-[#29285e] to-[#156bb3] bg-clip-text text-transparent">
                         ¿QUIÉNES SOMOS?
                     </h3>
-                </FadeIn>
-
-                <FadeIn delay={0.1}>
                     <h2 className="text-3xl md:text-4xl font-semibold">
                         Startup de desarrollo de software en Tucumán, experta en
                         desarrollo web y sistemas a medida
