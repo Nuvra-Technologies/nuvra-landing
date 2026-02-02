@@ -7,7 +7,7 @@ export const team: TeamMember[] = [
         role: "Negocio & UI",
         shortBio: "Descripción a desarrollar...",
         fullBio: "Descripción a desarrollar...",
-        image: "Link futuro"
+        image: "/nuvra.png"
     },
     {
         id: "founder-2",
@@ -15,7 +15,7 @@ export const team: TeamMember[] = [
         role: "Producto & UX",
         shortBio: "Descripción a desarrollar...",
         fullBio: "Descripción a desarrollar...",
-        image: "Link futuro"
+        image: "/nuvra.png"
     },
     {
         id: "founder-3",
@@ -23,6 +23,6 @@ export const team: TeamMember[] = [
         role: "Estrategia & Backend",
         shortBio: "Descripción a desarrollar...",
         fullBio: "Descripción a desarrollar...",
-        image: "Link futuro"
+        image: "/nuvra.png"
     }
 ]

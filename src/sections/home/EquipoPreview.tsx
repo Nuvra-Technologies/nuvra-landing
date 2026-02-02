@@ -1,5 +1,6 @@
 import FadeIn from "@/components/motion/FadeIn";
 import Link from "next/link";
+import Image from "next/image";
 import { team } from "@/data/team";
 
 export default function EquipoPreview() {
@@ -32,17 +33,28 @@ export default function EquipoPreview() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
                     {team.map((member, i) => (
                         <FadeIn key={member.name} delay={i * 0.1}>
-                            <div className="group rounded-2xl border border-neutral-800 bg-neutral-900/40 p-6 transition hover:border-neutral-700">
-                                <div className="aspect-square rounded-xl bg-neutral-800 mb-6 overflow-hidden">
-                                    {/* Colocar Image */}
-                                </div>
+                            <div className="group relative h-[420px] rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-900">
 
-                                <h3 className="text-lg font-medium">
-                                    {member.name}
-                                </h3>
-                                <p className="text-neutral-700 text-sm mt-1">
-                                    {member.role}
-                                </p>
+                                {/* Imagen */}
+                                <Image
+                                    src={member.image}
+                                    alt={member.name}
+                                    fill
+                                    className="object-cover transition duration-500 group-hover:scale-[1.03]"
+                                />
+
+                                {/* Overlay */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+
+                                {/* Info inferior */}
+                                <div className="absolute bottom-4 left-4 right-4 rounded-xl bg-neutral-900/80 backdrop-blur border border-neutral-800 px-4 py-3">
+                                    <h3 className="text-sm font-semibold leading-tight text-white">
+                                        {member.name}
+                                    </h3>
+                                    <p className="text-xs text-neutral-400 mt-0.5">
+                                        {member.role}
+                                    </p>
+                                </div>
                             </div>
                         </FadeIn>
                     ))}

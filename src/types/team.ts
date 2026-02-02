@@ -4,5 +4,5 @@ export interface TeamMember {
     role: string;
     shortBio?: string,
     fullBio: string;
-    image?: string;
+    image: string;
 }
