@@ -1,28 +1,5 @@
 import FadeIn from "@/components/motion/FadeIn";
-
-const team = [
-    {
-        name: "Nombre Apellido",
-        role: "Desarrollo & Arquitectura",
-        description:
-            "Especializado en desarrollo de sistemas a medida, arquitectura de software y optimización de performance.",
-        image: "/images/team/founder-1.jpg",
-    },
-    {
-        name: "Nombre Apellido",
-        role: "Producto & UX",
-        description:
-            "Enfocado en diseño de experiencias claras, usabilidad y productos pensados para el usuario final.",
-        image: "/images/team/founder-2.jpg",
-    },
-    {
-        name: "Nombre Apellido",
-        role: "Negocio & Estrategia",
-        description:
-            "Orientado a estrategia digital, procesos de negocio y soluciones alineadas a objetivos reales.",
-        image: "/images/team/founder-3.jpg",
-    },
-]
+import { team } from "@/data/team";
 
 export default function EquipoContent() {
     return (
@@ -63,7 +40,7 @@ export default function EquipoContent() {
                                     </p>
 
                                     <p className="mt-4 text-neutral-300 leading-relaxed max-w-xl">
-                                        {member.description}
+                                        {member.fullBio}
                                     </p>
                                 </div>
                             </div>

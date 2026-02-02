@@ -1,23 +1,6 @@
 import FadeIn from "@/components/motion/FadeIn";
 import Link from "next/link";
-
-const team = [
-    {
-        name: "Tomás Molina",
-        role: "Desarrollo & Arquitectura",
-        image: "link futuro"
-    },
-    {
-        name: "Ignacio Conort",
-        role: "Producto & UX",
-        image: "link futuro"
-    },
-    {
-        name: "Máximo Callejas",
-        role: "Negocio & Estrategia",
-        image: "link futuro"
-    }
-]
+import { team } from "@/data/team";
 
 export default function EquipoPreview() {
     return (

@@ -2,6 +2,7 @@ export interface TeamMember {
     id: string;
     name: string;
     role: string;
-    bio: string;
+    shortBio?: string,
+    fullBio: string;
     image?: string;
 }
