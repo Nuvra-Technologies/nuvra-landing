@@ -1,4 +1,5 @@
 import { createMetadata } from "@/lib/seo";
+import EquipoContent from "@/sections/equipo/EquipoContent";
 
 export const metadata = createMetadata({
     title: "Nuestro equipo | Nuvra",
@@ -8,9 +9,5 @@ export const metadata = createMetadata({
 });
 
 export default function EquipoPage() {
-    return (
-        <section>
-        {/* Equipo */}
-        </section>
-    );
+    return <EquipoContent />
 }

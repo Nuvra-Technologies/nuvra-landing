@@ -2,21 +2,27 @@ import type { TeamMember } from "@/types/team";
 
 export const team: TeamMember[] = [
     {
-        id: "1",
+        id: "founder-1",
         name: "Tomás Molina",
-        role: "Founder / Developer",
-        bio: "Descripción a desarrollar..."
+        role: "Negocio & UI",
+        shortBio: "Descripción a desarrollar...",
+        fullBio: "Descripción a desarrollar...",
+        image: "/nuvra.png"
     },
     {
-        id: "2",
+        id: "founder-2",
         name: "Ignacio Conort",
-        role: "Founder / Developer",
-        bio: "Descripción a desarrollar..."
+        role: "Producto & UX",
+        shortBio: "Descripción a desarrollar...",
+        fullBio: "Descripción a desarrollar...",
+        image: "/nuvra.png"
     },
     {
-        id: "3",
+        id: "founder-3",
         name: "Máximo Callejas",
-        role: "Founder / Developer",
-        bio: "Descripción a desarrollar..."
+        role: "Estrategia & Backend",
+        shortBio: "Descripción a desarrollar...",
+        fullBio: "Descripción a desarrollar...",
+        image: "/nuvra.png"
     }
 ]
