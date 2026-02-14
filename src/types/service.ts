@@ -1,6 +1,8 @@
+import { LucideIcon } from "lucide-react";
+
 export interface Service {
-    slug: string;
+    category: string;
     title: string;
-    summary: string;
-    description?: string;
+    description: string;
+    icon: LucideIcon;
 }

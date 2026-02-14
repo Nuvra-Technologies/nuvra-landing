@@ -1,75 +1,143 @@
-import FadeIn from "@/components/motion/FadeIn";
-import Link from "next/link";
+"use client";
 
-const services = [
-  {
-    title: "Sistemas a medida",
-    description:
-      "Desarrollamos sistemas adaptados a los procesos reales de tu empresa, escalables y pensados para el largo plazo.",
-  },
-  {
-    title: "Landing pages",
-    description:
-      "Diseñamos y desarrollamos landings claras, rápidas y orientadas a conversión para validar o potenciar tu negocio.",
-  },
-  {
-    title: "Desarrollo web",
-    description:
-      "Aplicaciones web modernas, seguras y mantenibles, con foco en rendimiento y experiencia de usuario.",
-  },
-];
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { useRef } from "react";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { services } from "@/data/services";
+import { Service } from "@/types/service";
+
+function StickyCard({
+  service,
+  index,
+  totalCards,
+}: {
+  service: Service;
+  index: number;
+  totalCards: number;
+}) {
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: cardRef,
+    offset: ["start start", "end start"],
+  });
+
+  const smoothProgress = useSpring(scrollYProgress, {
+    stiffness: 90,
+    damping: 25,
+    mass: 0.2
+  });
+
+  const scale = useTransform(
+    smoothProgress,
+    [0, 1],
+    [1, 0.92 + index * 0.01]
+  );
+
+  const stickyTop = 40 + index * 30;
+
+  return (
+    <div
+      ref={cardRef}
+      className="sticky"
+      style={{
+        top: `${stickyTop}px`,
+        zIndex: index + 1,
+        marginBottom: index < totalCards - 1 ? "0px" : "0px",
+      }}
+    >
+      <motion.div
+        style={{ scale }}
+        className="relative rounded-2xl bg-neutral-50 border border-neutral-200 overflow-hidden shadow-xl"
+      >
+        <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[500px] md:min-h-[560px]">
+
+          {/* Texto a la izquierda */}
+          <div className="grid md:grid-cols-2 gap-10 items-center h-full p-10 md:p-14">
+            <div>
+              <span className="text-sm font-semibold text-[#156bb3] uppercase tracking-wide">
+                {service.category}
+              </span>
+
+              <h3 className="text-2xl md:text-3xl font-semibold mt-4">
+                {service.title}
+              </h3>
+
+              <p className="mt-6 text-neutral-600 leading-relaxed max-w-lg">
+                {service.description}
+              </p>
+            </div>
+
+            <Link
+              href="/servicios"
+              className="inline-flex items-center gap-2 mt-10 text-sm font-semibold text-[#156bb3] group"
+            >
+              Ver más
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </div>
+        </div>
+
+        {/* Icono tipo fondo */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <service.icon
+            className="
+              absolute
+              -right-24
+              top-1/2
+              -translate-y-1/2
+              w-[360px]
+              h-[360px]
+              text-[#156bb3]
+              opacity-[0.06]
+            "
+            strokeWidth={1}
+          />
+        </div>
+
+      </motion.div>
+    </div>
+  );
+}
 
 export default function ServiciosPreview() {
   return (
-    <section className="relative py-32">
-      <div className="container mx-auto px-6 lg:px-0 max-w-6xl flex flex-col gap-16">
-        {/* Header */}
-        <div className="max-w-2xl">
-          <FadeIn>
-            <h3 className="font-semibold bg-gradient-to-r from-[#29285e] to-[#156bb3] bg-clip-text text-transparent">
-              SERVICIOS
-            </h3>
-          </FadeIn>
+    <section className="relative py-32 bg-white">
+      <div className="container mx-auto px-6 lg:px-0 max-w-6xl">
 
-          <FadeIn delay={0.1}>
-            <h2 className="text-3xl md:text-4xl font-semibold">
-              Software pensado para negocios reales
-            </h2>
-          </FadeIn>
+        <motion.h3
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="font-semibold bg-gradient-to-r from-[#29285e] to-[#156bb3] bg-clip-text text-transparent"
+        >
+          SERVICIOS
+        </motion.h3>
 
-          <FadeIn delay={0.2}>
-            <p className="mt-6 text-neutral-400 text-lg leading-relaxed">
-              Ayudamos a empresas a digitalizar, optimizar y crecer mediante
-              soluciones web claras y a medida.
-            </p>
-          </FadeIn>
-        </div>
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="text-3xl md:text-4xl font-semibold max-w-2xl mt-2 mb-20"
+        >
+          Estas son las soluciones que más piden las empresas cuando
+          empiezan a digitalizarse
+        </motion.h2>
 
-        {/* Services grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        {/* Sticky cards */}
+        <div className="flex flex-col gap-10">
           {services.map((service, i) => (
-            <FadeIn key={service.title} delay={i * 0.1}>
-              <div className="rounded-2xl border border-neutral-800 bg-neutral-900 p-8 h-full">
-                <h3 className="text-xl font-semibold">{service.title}</h3>
-                <p className="mt-4 text-neutral-400 leading-relaxed">
-                  {service.description}
-                </p>
-              </div>
-            </FadeIn>
+            <StickyCard
+              key={service.category}
+              service={service}
+              index={i}
+              totalCards={services.length}
+            />
           ))}
         </div>
-
-        {/* CTA */}
-        <FadeIn delay={0.3}>
-          <div>
-            <Link
-              href="/servicios"
-              className="inline-block rounded-lg bg-gradient-to-r from-[#29285e] to-[#156bb3] px-6 py-3 text-white font-medium"
-            >
-              Ver todos los servicios
-            </Link>
-          </div>
-        </FadeIn>
       </div>
     </section>
   );
