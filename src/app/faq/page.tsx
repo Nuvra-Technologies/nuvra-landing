@@ -1,4 +1,5 @@
 import { createMetadata } from "@/lib/seo";
+import FAQFull from "@/sections/faq/FAQFull";
 
 export const metadata = createMetadata({
     title: "Preguntas frecuentes | Nuvra",
@@ -10,7 +11,7 @@ export const metadata = createMetadata({
 export default function FaqPage() {
     return (
         <section>
-            {/* FAQ */}
+            <FAQFull />
         </section>
     );
 }
