@@ -33,7 +33,7 @@ export default function EquipoPreview() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
                     {team.map((member, i) => (
                         <FadeIn key={member.name} delay={i * 0.1}>
-                            <div className="group relative h-[420px] rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-900">
+                            <div className="group relative h-[420px] rounded-2xl overflow-hidden bg-neutral-900">
 
                                 {/* Imagen */}
                                 <Image

@@ -2,75 +2,117 @@ import { FAQ } from "@/types/faq";
 
 export const faqPreview: FAQ[] = [
     {
-        question: "¿Cuánto cuesta desarrollar un sistema o una web?",
+        question: "¿Cuánto cuesta un sitio web institucional o landing page a medida?",
         answer:
-            "Cada proyecto es distinto. El precio depende del alcance, funcionalidades y tiempos. Siempre entregamos una propuesta clara y cerrada antes de empezar.",
+            "",
     },
     {
-        question: "¿Cuánto tarda un proyecto?",
+        question: "¿Cuánto tiempo tardan en desarrollar un sistema personalizado para mi empresa?",
         answer:
-            "Una landing puede tardar 2–4 semanas. Un sistema a medida suele tardar entre 6 y 12 semanas dependiendo de la complejidad.",
+            "",
     },
     {
-        question: "¿Tengo que saber de tecnología?",
+        question: "¿Cómo funciona el proceso de desarrollo de software a medida en su startup?",
         answer:
-            "No. Nos encargamos de todo el proceso y te guiamos paso a paso para que puedas tomar decisiones sin conocimientos técnicos.",
+            "",
     },
     {
-        question: "¿Qué pasa después de lanzar?",
+        question: "¿Qué beneficios tiene un sitio web a medida vs. una plantilla gratuita como WordPress?",
         answer:
-            "Ofrecemos soporte, mejoras evolutivas y mantenimiento para que tu proyecto siga creciendo.",
+            "",
     },
 ];
 
 export const faqFull: FAQ[] = [
     {
-        category: "Costos",
-        question: "¿Cuánto cuesta un proyecto?",
+        category: "Tecnología",
+        question: "¿Qué es el desarrollo de software a medida?",
         answer:
             "El costo depende del alcance y complejidad. Trabajamos con presupuestos cerrados para evitar sorpresas.",
     },
     {
         category: "Costos",
-        question: "¿Se puede pagar en etapas?",
+        question: "¿Cuánto cuesta un sitio web institucional o landing page a medida?",
         answer:
             "Sí. Normalmente trabajamos con un anticipo inicial y pagos por hitos del proyecto.",
     },
     {
         category: "Proceso",
-        question: "¿Cómo es el proceso de trabajo?",
+        question: "¿Cuánto tiempo tardan en desarrollar un sistema personalizado para mi empresa?",
         answer:
             "Investigación → propuesta → diseño → desarrollo → pruebas → lanzamiento. Te mantenemos informado en cada etapa.",
     },
     {
         category: "Proceso",
-        question: "¿Trabajan con empresas pequeñas?",
+        question: "¿Cómo funciona el proceso de desarrollo de software a medida en su startup?",
         answer:
             "Sí. De hecho, la mayoría de nuestros clientes están dando sus primeros pasos en digitalización.",
     },
     {
         category: "Tecnología",
-        question: "¿Quién mantiene el sistema después?",
+        question: "¿Ofrecen mantenimiento y actualizaciones para sitios web y sistemas a medida?",
         answer:
             "Podemos encargarnos del mantenimiento o capacitar a tu equipo para gestionarlo.",
     },
     {
-        category: "Resultados",
-        question: "¿Mi proyecto tendrá SEO y rendimiento optimizado?",
+        category: "Tecnología",
+        question: "¿Pueden integrar mi software a medida con herramientas como WhatsApp, Mercado Pago o CRM existentes?",
         answer:
             "Sí. Todas nuestras webs se entregan optimizadas para velocidad, SEO técnico y conversión.",
     },
     {
         category: "Soporte",
-        question: "¿Ofrecen soporte después del lanzamiento?",
+        question: "¿Es seguro el desarrollo de sistemas personalizados para manejar datos de clientes?",
         answer:
             "Sí. Podemos seguir trabajando en mejoras, nuevas funcionalidades y soporte continuo.",
     },
     {
-        category: "Trabajo",
-        question: "¿Trabajan de forma remota?",
+        category: "Tecnología",
+        question: "¿Qué beneficios tiene un sitio web a medida vs. una plantilla gratuita como WordPress?",
         answer:
             "Sí. Trabajamos con clientes de distintos lugares mediante reuniones online y comunicación constante.",
+    },
+    {
+        category: "Soporte",
+        question: "¿Trabajan de forma remota?",
+        answer:
+            "",
+    },
+    {
+        category: "Soporte",
+        question: "¿Cómo puedo solicitar un presupuesto para un sistema de gestión a medida?",
+        answer:
+            "",
+    },
+    {
+        category: "Tecnología",
+        question: "¿Usan tecnologías modernas como React, Next.js o Node.js en sus desarrollos?",
+        answer:
+            "",
+    },
+    {
+        category: "Costos",
+        question: "¿Ofrecen planes de pago en cuotas para desarrollo de software a medida?",
+        answer:
+            "",
+    },
+    {
+        category: "Soporte",
+        question: "¿Qué pasa si necesito cambios después de lanzar el sitio web o sistema?",
+        answer:
+            "",
+    },
+    {
+        category: "Tecnología",
+        question: "¿Pueden optimizar mi sitio web para SEO y móviles?",
+        answer:
+            "",
+    },
+    {
+        category: "Soporte",
+        question: "¿Tienen casos de éxito de pymes que usaron sus servicios de software a medida?",
+        answer:
+            "",
     },
 ];
 
