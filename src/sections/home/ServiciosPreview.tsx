@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { services } from "@/data/services";
+import { servicesPreview } from "@/data/services";
 import { Service } from "@/types/service";
 
 function StickyCard({
@@ -68,14 +68,6 @@ function StickyCard({
                 {service.description}
               </p>
             </div>
-
-            <Link
-              href="/servicios"
-              className="inline-flex items-center gap-2 mt-10 text-sm font-semibold text-[#156bb3] group"
-            >
-              Ver más
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </Link>
           </div>
         </div>
 
@@ -95,7 +87,6 @@ function StickyCard({
             strokeWidth={1}
           />
         </div>
-
       </motion.div>
     </div>
   );
@@ -129,15 +120,32 @@ export default function ServiciosPreview() {
 
         {/* Sticky cards */}
         <div className="flex flex-col gap-10">
-          {services.map((service, i) => (
+          {servicesPreview.map((service, i) => (
             <StickyCard
-              key={service.category}
+              key={service.title}
               service={service}
               index={i}
-              totalCards={services.length}
+              totalCards={servicesPreview.length}
             />
           ))}
         </div>
+
+        {/* CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mt-16"
+        >
+          <Link
+            href="/servicios"
+            className="inline-flex items-center gap-3 rounded-lg bg-gradient-to-r from-[#29285e] to-[#156bb3] px-6 py-3 text-white font-medium shadow-lg hover:shadow-xl transition"
+          >
+            Ver todos los servicios
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </motion.div>
       </div>
     </section>
   );
