@@ -4,6 +4,7 @@ import QuienesSomosPreview from "@/sections/home/QuienesSomosPreview";
 import EquipoPreview from "@/sections/home/EquipoPreview";
 import ServiciosPreview from "@/sections/home/ServiciosPreview";
 import FAQPreview from "@/sections/home/FAQPreview";
+import WhyChooseUsPreview from "@/sections/home/WhyChooseUs";
 
 export const metadata: Metadata = {
   title: "Inicio | Nuvra Technologies",
@@ -19,6 +20,7 @@ export default function HomePage() {
       <EquipoPreview />
       <ServiciosPreview />
       <FAQPreview />
+      <WhyChooseUsPreview />
     </>
   );
 }
