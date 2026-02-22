@@ -29,14 +29,14 @@ export default function Navbar() {
           <Link href="/servicios" className="hover:text-gray-600">
             Servicios
           </Link>
-          <Link href="#contact" className="hover:text-gray-600">
+          <Link href="/contacto" className="hover:text-gray-600">
             Contacto
           </Link>
         </nav>
 
         {/* CTA */}
         <Link
-          href="#contact"
+          href="/contacto"
           className="inline-flex items-center rounded-full bg-gradient-to-r from-[#29285e] to-[#156bb3] px-5 py-2 text-sm font-semibold text-white transition"
         >
           Hablemos
