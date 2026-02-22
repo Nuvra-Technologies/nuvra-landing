@@ -5,8 +5,8 @@ import EquipoPreview from "@/sections/home/EquipoPreview";
 import ServiciosPreview from "@/sections/home/ServiciosPreview";
 import FAQPreview from "@/sections/home/FAQPreview";
 import WhyChooseUsPreview from "@/sections/home/WhyChooseUs";
-import Contacto from "@/sections/contacto/Contacto";
 import TrabajosCarousel from "@/sections/trabajos/TrabajosCarousel";
+import Contacto from "@/sections/home/Contacto";
 
 export const metadata: Metadata = {
   title: "Inicio | Nuvra Technologies",
