@@ -1,16 +1,13 @@
 import { createMetadata } from "@/lib/seo";
+import Contacto from "@/sections/contacto/Contacto";
 
 export const metadata = createMetadata({
-    title: "Contacto | Nuvra",
-    description:
-        "Contactanos para comenzar tu próximo proyecto digital. Estamos listos para ayudarte.",
-    path: "/contacto"
+  title: "Contáctanos | Nuvra Technologies",
+  description:
+    "Contáctanos para desarrollar tu próximo proyecto digital. En Nuvra Technologies te ayudamos con soluciones modernas, escalables y orientadas a resultados.",
+  path: "/contacto",
 });
 
 export default function ContactoPage() {
-    return (
-        <section>
-            {/* Contacto */}
-        </section>
-    );
+  return <Contacto />;
 }

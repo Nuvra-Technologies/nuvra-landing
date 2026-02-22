@@ -36,7 +36,7 @@ export default function Navbar() {
 
         {/* CTA */}
         <Link
-          href="#contact"
+          href="/contacto"
           className="inline-flex items-center rounded-full bg-gradient-to-r from-[#29285e] to-[#156bb3] px-5 py-2 text-sm font-semibold text-white transition"
         >
           Hablemos
