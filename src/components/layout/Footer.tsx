@@ -7,7 +7,6 @@ export default function Footer() {
   return (
     <footer className="bg-white border-t border-gray-200 mt-32">
       <div className="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-3 gap-16">
-
         {/* Marca */}
         <div className="flex flex-col gap-6 max-w-sm">
           <Link
@@ -29,9 +28,7 @@ export default function Footer() {
             herramientas claras y escalables.
           </p>
 
-          <p className="text-neutral-400 text-xs">
-            Tucumán, Argentina
-          </p>
+          <p className="text-neutral-400 text-xs">Tucumán, Argentina</p>
         </div>
 
         {/* Navegación */}
@@ -40,19 +37,31 @@ export default function Footer() {
             Navegación
           </h4>
 
-          <Link href="/servicios" className="text-neutral-600 hover:text-neutral-900 text-sm">
+          <Link
+            href="/servicios"
+            className="text-neutral-600 hover:text-neutral-900 text-sm"
+          >
             Servicios
           </Link>
 
-          <Link href="/quienes-somos" className="text-neutral-600 hover:text-neutral-900 text-sm">
+          <Link
+            href="/quienes-somos"
+            className="text-neutral-600 hover:text-neutral-900 text-sm"
+          >
             Nosotros
           </Link>
 
-          <Link href="/equipo" className="text-neutral-600 hover:text-neutral-900 text-sm">
+          <Link
+            href="/equipo"
+            className="text-neutral-600 hover:text-neutral-900 text-sm"
+          >
             Equipo
           </Link>
 
-          <Link href="/preguntas-frecuentes" className="text-neutral-600 hover:text-neutral-900 text-sm">
+          <Link
+            href="/preguntas-frecuentes"
+            className="text-neutral-600 hover:text-neutral-900 text-sm"
+          >
             Preguntas frecuentes
           </Link>
         </div>
@@ -81,7 +90,8 @@ export default function Footer() {
 
       {/* Bottom */}
       <div className="border-t border-gray-200 py-6 text-center text-sm text-neutral-500">
-        © {new Date().getFullYear()} Nuvra Technologies. Todos los derechos reservados.
+        © {new Date().getFullYear()} Nuvra Technologies. Todos los derechos
+        reservados.
       </div>
     </footer>
   );
