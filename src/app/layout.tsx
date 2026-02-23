@@ -3,22 +3,29 @@ import "./globals.css";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
 import { Plus_Jakarta_Sans, Inter } from "next/font/google";
+import Script from "next/script";
 
-export const metadata: Metadata = {
-  title: "Nuvra Technologies | Soluciones digitales",
-  description: "Creamos soluciones digitales modernas para hacer crecer tu negocio.",
-};
+import { createMetadata } from "@/lib/seo";
+import { generateOrganizationSchema } from "@/lib/schema/organization";
+import { generateWebsiteSchema } from "@/lib/schema/website";
+
+export const metadata: Metadata = createMetadata({
+  title: "Nuvra Technologies | Soluciones digitales modernas",
+  description:
+    "Creamos soluciones digitales modernas, escalables y orientadas a resultados para empresas que buscan crecer.",
+  path: "/",
+});
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-jakarta",
-  display: "swap"
+  display: "swap",
 });
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
-  display: "swap"
+  display: "swap",
 });
 
 export default function RootLayout({
@@ -31,6 +38,24 @@ export default function RootLayout({
       <body
         className={`${jakarta.variable} ${inter.variable} bg-white text-gray-900 antialiased`}
       >
+        {/* Organization Schema */}
+        <Script
+          id="organization-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateOrganizationSchema()),
+          }}
+        />
+
+        {/* Website Schema */}
+        <Script
+          id="website-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateWebsiteSchema()),
+          }}
+        />
+
         <Navbar />
         <main>{children}</main>
         <Footer />

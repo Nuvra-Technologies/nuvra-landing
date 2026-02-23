@@ -1,4 +1,3 @@
-import { Metadata } from "next";
 import Hero from "@/sections/home/Hero";
 import QuienesSomosPreview from "@/sections/home/QuienesSomosPreview";
 import EquipoPreview from "@/sections/home/EquipoPreview";
@@ -7,12 +6,12 @@ import FAQPreview from "@/sections/home/FAQPreview";
 import WhyChooseUsPreview from "@/sections/home/WhyChooseUs";
 import TrabajosCarousel from "@/sections/trabajos/TrabajosCarousel";
 import Contacto from "@/sections/home/Contacto";
+import { createMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
   title: "Inicio | Nuvra Technologies",
-  description:
-    "Somos una startup especializada en soluciones digitales modernas, escalables y orientadas a resultados.",
-};
+  path: "/",
+});
 
 export default function HomePage() {
   return (
