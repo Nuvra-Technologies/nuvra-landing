@@ -3,7 +3,7 @@ import { Works } from "@/types/works";
 export const trabajos: Works[] = [
     {
         id: 1,
-        titulo: "Plex Commodities",
+        titulo: "Plex Commodities Co.",
         categoria: "Landing corporativa",
         descripcion:
             "Diseño y desarrollo de landing institucional para empresa canadiense del sector commodities, optimizada para performance y conversión.",
@@ -12,7 +12,7 @@ export const trabajos: Works[] = [
     },
     {
         id: 2,
-        titulo: "Taller de bicicletas",
+        titulo: "MFC Detailing Service",
         categoria: "Landing + presencia digital",
         descripcion:
             "Landing profesional enfocada en posicionamiento local, claridad de servicios y experiencia mobile-first.",
@@ -20,10 +20,10 @@ export const trabajos: Works[] = [
     },
     {
         id: 3,
-        titulo: "Sistema de gestión interno",
+        titulo: "MFC Detailing Service",
         categoria: "Software a medida",
         descripcion:
-            "Sistema personalizado para gestión de turnos, stock y seguimiento de clientes, diseñado para optimizar la operación diaria.",
+            "Sistema personalizado para gestión de trabajos, clientes, caja y garantías, control de stock y generación de presupuestos.",
         imagen: "/images/works/mockup-dash-mfc.png",
     },
 ];
