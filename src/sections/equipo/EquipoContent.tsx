@@ -72,7 +72,7 @@ export default function EquipoContent() {
                 <p className="mt-1 text-[#156bb3] font-medium z-10">
                   {member.role}
                 </p>
-                <p className="mt-4 text-neutral-600 z-10">{member.shortBio}</p>
+                <p className="mt-4 text-neutral-600 z-10">{member.fullBio}</p>
               </div>
             </FadeIn>
           ))}
