@@ -13,8 +13,10 @@ export default function QuienesSomosPreview() {
                         ¿QUIÉNES SOMOS?
                     </h3>
                     <h2 className="text-3xl md:text-4xl font-semibold">
-                        Startup de software a medida en Tucumán: 
-                        <span> desarrollo web y sistemas personalizados para pymes argentinas</span>
+                        Software a medida desarrollado en Tucumán
+                        <span className="block">
+                            para empresas que quieren crecer con tecnología real
+                        </span>
                     </h2>
                 </FadeIn>
 
@@ -39,10 +41,14 @@ export default function QuienesSomosPreview() {
                     <FadeIn delay={0.1}>
                         <div className="relative md:absolute md:left-1/2 md:-translate-x-1/2 md:-bottom-32 mt-6 md:mt-0 w-full max-w-2xl rounded-2xl bg-white p-4 shadow-xl text-center">
                             <p className="text-neutral-700 text-lg leading-relaxed">
-                                Somos un equipo de Tucumán, recibidos de Programadores Universitarios de la UTN, que crea <strong>software a medida</strong> y <strong>desarrollo web profesional.</strong>
+                                Somos un equipo de desarrolladores formados en la UTN Tucumán,
+                                especializados en <strong>software a medida</strong> y
+                                <strong> desarrollo web profesional </strong>para pymes argentinas.
                             </p>
                             <p className="mt-4 text-neutral-600 text-base">
-                                Entendemos el día a día argentino: controlar costos, agilizar procesos y crecer. Armamos herramientas reales, fáciles de usar y escalables.
+                                Entendemos el contexto local: optimizar recursos, ordenar procesos
+                                y crear herramientas que realmente acompañen el crecimiento del negocio.
+                                Diseñamos soluciones claras, escalables y pensadas para el largo plazo.
                             </p>
 
                             <Link
