@@ -234,7 +234,7 @@ export default function Contacto() {
                             <button
                                 type="submit"
                                 disabled={cargando}
-                                className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-[#29285e] to-[#156bb3] px-7 py-3.5 text-sm font-medium text-white shadow-lg hover:scale-[1.02] transition disabled:opacity-60"
+                                className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-[#29285e] to-[#156bb3] px-7 py-3.5 text-sm font-medium text-white shadow-lg hover:scale-[1.02] transition disabled:opacity-60 cursor-pointer"
                             >
                                 {cargando ? "Enviando..." : "Enviar mensaje"}
                             </button>

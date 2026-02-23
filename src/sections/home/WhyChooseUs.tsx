@@ -70,7 +70,7 @@ export default function WhyChooseUsPreview() {
         <FadeIn delay={0.3}>
           <div className="mt-8">
             <Link
-              href="#contact"
+              href="/contacto"
               className="inline-flex items-center gap-3 rounded-lg bg-gradient-to-r from-[#29285e] to-[#156bb3] px-6 py-3 text-white font-medium shadow-lg hover:shadow-xl transition"
             >
               Hablemos de tu proyecto
