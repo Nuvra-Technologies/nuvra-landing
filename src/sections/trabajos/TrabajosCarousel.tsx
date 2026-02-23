@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { trabajos } from "@/data/works";
+import Link from "next/link";
 
 export default function TrabajosCarousel() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -74,8 +75,9 @@ export default function TrabajosCarousel() {
           </h2>
 
           <p className="mt-6 text-neutral-500 text-lg leading-relaxed">
-            Cada proyecto fue desarrollado con foco en claridad, escalabilidad y
-            una experiencia de usuario profesional.
+            No desarrollamos solo interfaces. Diseñamos soluciones digitales 
+            alineadas al negocio, priorizando estructura, claridad estratégica 
+            y escalabilidad técnica.
           </p>
         </div>
 
@@ -140,16 +142,25 @@ export default function TrabajosCarousel() {
                           {trabajo.descripcion}
                         </p>
 
-                        {trabajo.url && (
-                          <a
-                            href={trabajo.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-block text-sm font-medium text-[#156bb3] hover:underline"
+                        <div className="flex items-center gap-4">
+                          <Link
+                            href={`/proyectos/${trabajo.slug}`}
+                            className="text-sm font-medium text-[#156bb3] hover:underline"
                           >
-                            Ver sitio →
-                          </a>
-                        )}
+                            Ver caso completo →
+                          </Link>
+
+                          {trabajo.url && (
+                            <a
+                              href={trabajo.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-sm text-neutral-500 hover:text-neutral-700"
+                            >
+                              Ver sitio →
+                            </a>
+                          )}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -193,9 +204,17 @@ export default function TrabajosCarousel() {
                       <h3 className="text-base font-semibold text-gray-900">
                         {trabajo.titulo}
                       </h3>
+                      
                       <p className="mt-2 text-sm text-gray-700 leading-relaxed">
                         {trabajo.descripcion}
                       </p>
+
+                      <Link
+                        href={`/proyectos/${trabajo.slug}`}
+                        className="mt-3 inline-block text-sm font-medium text-[#156bb3] hover:underline"
+                      >
+                        Ver caso completo →
+                      </Link>
                     </div>
                   </div>
                 </article>

@@ -34,6 +34,7 @@ export default function Navbar() {
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
           <Link href="/">Inicio</Link>
           <Link href="/servicios">Servicios</Link>
+          <Link href="/proyectos">Proyectos</Link>
           <Link href="/quienes-somos">Nosotros</Link>
         </nav>
 
@@ -73,6 +74,14 @@ export default function Navbar() {
               className="py-3 border-b border-gray-100"
             >
               Servicios
+            </Link>
+
+            <Link
+              href="/proyectos"
+              onClick={() => setOpen(false)}
+              className="py-3 border-b border-gray-100"
+            >
+              Proyectos
             </Link>
       
             <Link
