@@ -34,7 +34,7 @@ export default function EquipoContent() {
           <FadeIn delay={0.3}>
             <div className="relative w-full h-80 lg:h-96 rounded-2xl overflow-hidden shadow-lg">
               <Image
-                src="/images/team-theme.jpg"
+                src="/images/card-background.jpg"
                 alt="Equipo"
                 fill
                 className="object-cover"
@@ -81,17 +81,21 @@ export default function EquipoContent() {
         {/* PARTE FINAL / FILOSOFÍA */}
         <FadeIn>
           <div className="rounded-3xl bg-gradient-to-r from-[#29285e] to-[#156bb3] p-14 text-white shadow-xl text-center sm:text-left">
-            <h2 className="text-3xl font-semibold">Nuestra filosofía</h2>
+            <h2 className="text-3xl font-semibold">
+              Trabajemos juntos
+            </h2>
+
             <p className="mt-6 max-w-2xl text-white/90 leading-relaxed">
-              Creemos en la colaboración, la creatividad y en construir
-              soluciones digitales que realmente generen impacto. Cada proyecto
-              es una oportunidad para aprender y mejorar juntos.
+              Detrás de cada sistema que desarrollamos hay personas que escuchan,
+              analizan y construyen soluciones reales. Si tenés una idea o un
+              desafío, estamos listos para ayudarte.
             </p>
+
             <a
-              href="/proyectos"
+              href="/contacto"
               className="inline-block mt-8 px-8 py-4 rounded-xl bg-white/10 backdrop-blur hover:bg-white/20 text-white font-medium shadow-lg hover:scale-[1.02] transition"
             >
-              Ver nuestros proyectos
+              Hablemos sobre tu proyecto
             </a>
           </div>
         </FadeIn>

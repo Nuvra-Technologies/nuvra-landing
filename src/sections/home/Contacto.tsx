@@ -128,6 +128,19 @@ export default function Contacto() {
                                     linkedin.com/in/nuvra-technologies
                                 </a>
                             </div>
+                            <div>
+                                <h3 className="text-xs font-semibold text-neutral-700 uppercase tracking-wide">
+                                    Instagram
+                                </h3>
+                                <a
+                                    href="https://www.instagram.com/nuvratg?igsh=MXRnbnV6ajBidXY3-cA=="
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="mt-2 inline-block text-neutral-600 hover:text-black transition break-all"
+                                >
+                                    instagram.com/nuvratg
+                                </a>
+                            </div>
                         </div>
                         <div className="mt-8 rounded-xl border border-neutral-200 bg-white p-4">
                             <p className="text-sm text-neutral-500 leading-relaxed">
