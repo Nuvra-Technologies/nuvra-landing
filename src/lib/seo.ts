@@ -5,7 +5,7 @@ const SITE_URL = "https://nuvratg.com";
 const DEFAULT_DESCRIPTION =
     "Startup especializada en soluciones digitales modernas, escalables y orientadas a resultados.";
 
-const DEFAULT_OG_IMAGE = "/og/og-image.jpg";
+const DEFAULT_OG_IMAGE = "/og/og-image.png";
 
 export function createMetadata({
     title,
