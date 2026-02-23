@@ -3,7 +3,10 @@ import Hero from "@/sections/home/Hero";
 import QuienesSomosPreview from "@/sections/home/QuienesSomosPreview";
 import EquipoPreview from "@/sections/home/EquipoPreview";
 import ServiciosPreview from "@/sections/home/ServiciosPreview";
+import FAQPreview from "@/sections/home/FAQPreview";
+import WhyChooseUsPreview from "@/sections/home/WhyChooseUs";
 import TrabajosCarousel from "@/sections/trabajos/TrabajosCarousel";
+import Contacto from "@/sections/home/Contacto";
 
 export const metadata: Metadata = {
   title: "Inicio | Nuvra Technologies",
@@ -16,9 +19,12 @@ export default function HomePage() {
     <>
       <Hero />
       <QuienesSomosPreview />
-      <EquipoPreview />
       <ServiciosPreview />
       <TrabajosCarousel />
+      <WhyChooseUsPreview />
+      <EquipoPreview />
+      <FAQPreview />
+      <Contacto />
     </>
   );
 }

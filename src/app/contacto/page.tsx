@@ -1,5 +1,5 @@
 import { createMetadata } from "@/lib/seo";
-import Contacto from "@/sections/contacto/Contacto";
+import Contacto from "@/sections/contacto/ContactoDetail";
 
 export const metadata = createMetadata({
   title: "Contáctanos | Nuvra Technologies",

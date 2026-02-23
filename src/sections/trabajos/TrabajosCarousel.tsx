@@ -2,34 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-
-type Trabajo = {
-  id: number;
-  titulo: string;
-  descripcion: string;
-  imagen: string;
-};
-
-const trabajos: Trabajo[] = [
-  {
-    id: 1,
-    titulo: "Landing Corporativa",
-    descripcion: "...",
-    imagen: "/images/works/work-1.webp",
-  },
-  {
-    id: 2,
-    titulo: "Sistema de Gestión",
-    descripcion: "...",
-    imagen: "/images/works/work-2.webp",
-  },
-  {
-    id: 3,
-    titulo: "Landing Corporativa",
-    descripcion: "...",
-    imagen: "/images/works/work-3.webp",
-  },
-];
+import { trabajos } from "@/data/works";
 
 export default function TrabajosCarousel() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -88,22 +61,22 @@ export default function TrabajosCarousel() {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-white to-[#f7f9fc]">
+    <section className="relative py-32">
       <div className="container mx-auto px-6 lg:px-0 max-w-6xl">
         {/* Header */}
-        <div className="max-w-3xl mb-10 md:mb-14">
-        <p className="text-sm md:text-base font-semibold tracking-wide uppercase text-[#29285e]">
-            Proyectos
-        </p>
+        <div className="max-w-3xl mb-16">
+          <p className="font-semibold bg-gradient-to-r from-[#29285e] to-[#156bb3] bg-clip-text text-transparent">
+            PROYECTOS
+          </p>
 
-        <h2 className="mt-2 text-2xl md:text-4xl font-bold tracking-tight text-gray-900">
-            Trabajos que ya realizamos
-        </h2>
+          <h2 className="mt-2 text-3xl md:text-4xl font-semibold tracking-tight">
+            Algunos proyectos que ya desarrollamos
+          </h2>
 
-        <p className="mt-3 text-sm md:text-base text-gray-600 leading-relaxed">
-            Algunos proyectos desarrollados con foco en diseño, performance,
-            escalabilidad y una experiencia de usuario profesional.
-        </p>
+          <p className="mt-6 text-neutral-500 text-lg leading-relaxed">
+            Cada proyecto fue desarrollado con foco en claridad, escalabilidad
+            y una experiencia de usuario profesional.
+          </p>
         </div>
 
         {/* Desktop / tablet: acordion de tarjetas*/}
@@ -144,26 +117,43 @@ export default function TrabajosCarousel() {
                 />
 
                 {/* Content */}
-                <div className="relative h-full p-5 md:p-6 flex flex-col justify-end">
-                  <div className="rounded-xl bg-white/90 backdrop-blur-sm border border-white/40 p-4 shadow-sm">
-                    <h3 className="text-sm md:text-base font-semibold text-gray-900">
+                <div className="relative h-full p-6 flex flex-col justify-end">
+                  <div className="rounded-xl bg-white/90 backdrop-blur-md border border-white/40 p-5 shadow-lg transition-all duration-500">
+                                
+                    <p className="text-xs uppercase tracking-wide text-neutral-500">
+                      {trabajo.categoria}
+                    </p>
+                                
+                    <h3 className="mt-1 text-base font-semibold text-gray-900">
                       {trabajo.titulo}
                     </h3>
-
+                                
                     <div
                       className={[
                         "grid transition-all duration-500 ease-out",
                         isActive
-                          ? "grid-rows-[1fr] opacity-100 mt-2"
+                          ? "grid-rows-[1fr] opacity-100 mt-3"
                           : "grid-rows-[0fr] opacity-0 mt-0",
                       ].join(" ")}
                     >
-                      <div className="overflow-hidden">
-                        <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
+                      <div className="overflow-hidden space-y-3">
+                        <p className="text-sm text-gray-700 leading-relaxed">
                           {trabajo.descripcion}
                         </p>
+                    
+                        {trabajo.url && (
+                          <a
+                            href={trabajo.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block text-sm font-medium text-[#156bb3] hover:underline"
+                          >
+                            Ver sitio →
+                          </a>
+                        )}
                       </div>
                     </div>
+                      
                   </div>
                 </div>
               </article>

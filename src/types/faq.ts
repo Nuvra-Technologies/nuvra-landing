@@ -1,5 +1,5 @@
-export interface FaqItem {
-    id: string;
+export interface FAQ {
     question: string;
     answer: string;
+    category?: string;
 }

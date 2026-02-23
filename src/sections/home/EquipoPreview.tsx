@@ -33,7 +33,7 @@ export default function EquipoPreview() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
                     {team.map((member, i) => (
                         <FadeIn key={member.name} delay={i * 0.1}>
-                            <div className="group relative h-[420px] rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-900">
+                            <div className="group relative h-[420px] rounded-2xl overflow-hidden bg-neutral-900">
 
                                 {/* Imagen */}
                                 <Image
@@ -47,13 +47,18 @@ export default function EquipoPreview() {
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
                                 {/* Info inferior */}
-                                <div className="absolute bottom-4 left-4 right-4 rounded-xl bg-neutral-900/80 backdrop-blur border border-neutral-800 px-4 py-3">
-                                    <h3 className="text-sm font-semibold leading-tight text-white">
-                                        {member.name}
-                                    </h3>
-                                    <p className="text-xs text-neutral-400 mt-0.5">
-                                        {member.role}
-                                    </p>
+                                <div className="absolute bottom-4 left-4 right-4">
+                                    <div className="rounded-xl bg-white/85 backdrop-blur-xl border border-white/40 px-5 py-4 shadow-lg transition duration-300 group-hover:shadow-xl">
+
+                                        <h3 className="text-sm font-semibold text-gray-900 leading-tight">
+                                            {member.name}
+                                        </h3>
+
+                                        <p className="mt-1 text-xs font-medium bg-gradient-to-r from-[#29285e] to-[#156bb3] bg-clip-text text-transparent">
+                                            {member.role}
+                                        </p>
+
+                                    </div>
                                 </div>
                             </div>
                         </FadeIn>
