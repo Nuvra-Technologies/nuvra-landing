@@ -49,8 +49,37 @@ function StickyCard({
     >
       <motion.div
         style={{ scale }}
-        className="relative rounded-2xl bg-neutral-50 border border-neutral-200 overflow-hidden shadow-xl"
+        className="relative rounded-2xl bg-neutral-50 border border-neutral-200 overflow-hidden shadow-xl backdrop-blur-[2px]"
       >
+
+        {/* Aura tornasolada */}
+        <div
+          className="
+            absolute
+            inset-0
+            pointer-events-none
+            rounded-2xl
+            opacity-[0.35]
+          "
+        >
+          <div
+            className={`
+              absolute
+              -top-32
+              -left-32
+              w-[400px]
+              h-[400px]
+              rounded-full
+              blur-3xl
+              ${
+                index % 2 === 0
+                  ? "bg-gradient-to-br from-[#29285e]/20 to-[#156bb3]/10"
+                  : "bg-gradient-to-br from-[#156bb3]/20 to-[#29285e]/10"
+              }
+            `}
+          />
+        </div>
+        
         <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[500px] md:min-h-[560px]">
 
           {/* Texto a la izquierda */}
@@ -71,20 +100,37 @@ function StickyCard({
           </div>
         </div>
 
-        {/* Icono tipo fondo */}
+        {/* Icono tipo fondo*/}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
+
+          {/* Glow sutil */}
+          <div className="
+            absolute
+            right-[-80px]
+            top-1/2
+            -translate-y-1/2
+            w-[320px]
+            h-[320px]
+            bg-gradient-to-br
+            from-[#156bb3]/20
+            to-transparent
+            blur-3xl
+            opacity-40
+          " />
+
+          {/* Icono */}
           <service.icon
             className="
               absolute
-              -right-24
+              right-[-60px]
               top-1/2
               -translate-y-1/2
-              w-[360px]
-              h-[360px]
+              w-[260px]
+              h-[260px]
               text-[#156bb3]
-              opacity-[0.06]
+              opacity-[0.12]
             "
-            strokeWidth={1}
+            strokeWidth={1.2}
           />
         </div>
       </motion.div>
