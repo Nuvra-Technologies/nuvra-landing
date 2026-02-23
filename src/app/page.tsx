@@ -19,11 +19,11 @@ export default function HomePage() {
     <>
       <Hero />
       <QuienesSomosPreview />
-      <EquipoPreview />
       <ServiciosPreview />
-      <FAQPreview />
-      <WhyChooseUsPreview />
       <TrabajosCarousel />
+      <WhyChooseUsPreview />
+      <EquipoPreview />
+      <FAQPreview />
       <Contacto />
     </>
   );

@@ -20,17 +20,16 @@ export default function Navbar() {
 
         {/* Navigation */}
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
-          <Link href="/quienes-somos" className="hover:text-gray-600">
-            Nosotros
+          <Link href="/" className="hover:text-gray-600">
+            Inicio
           </Link>
-          <Link href="/equipo" className="hover:text-gray-600">
-            Equipo
-          </Link>
+
           <Link href="/servicios" className="hover:text-gray-600">
             Servicios
           </Link>
-          <Link href="/faq" className="hover:text-gray-600">
-            Preguntas frecuentes
+
+          <Link href="/quienes-somos" className="hover:text-gray-600">
+            Nosotros
           </Link>
         </nav>
 
