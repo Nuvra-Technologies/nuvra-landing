@@ -27,7 +27,7 @@ const reasons = [
 
 export default function WhyChooseUsPreview() {
   return (
-    <section className="relative py-32 bg-white">
+    <section className="relative py-16 md:py-24 lg:py-32 bg-white">
       <div className="container mx-auto px-6 lg:px-0 max-w-6xl flex flex-col gap-16">
         <div className="max-w-2xl">
           <FadeIn>

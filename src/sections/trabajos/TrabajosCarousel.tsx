@@ -74,8 +74,8 @@ export default function TrabajosCarousel() {
           </h2>
 
           <p className="mt-6 text-neutral-500 text-lg leading-relaxed">
-            Cada proyecto fue desarrollado con foco en claridad, escalabilidad
-            y una experiencia de usuario profesional.
+            Cada proyecto fue desarrollado con foco en claridad, escalabilidad y
+            una experiencia de usuario profesional.
           </p>
         </div>
 
@@ -119,15 +119,14 @@ export default function TrabajosCarousel() {
                 {/* Content */}
                 <div className="relative h-full p-6 flex flex-col justify-end">
                   <div className="rounded-xl bg-white/90 backdrop-blur-md border border-white/40 p-5 shadow-lg transition-all duration-500">
-                                
                     <p className="text-xs uppercase tracking-wide text-neutral-500">
                       {trabajo.categoria}
                     </p>
-                                
+
                     <h3 className="mt-1 text-base font-semibold text-gray-900">
                       {trabajo.titulo}
                     </h3>
-                                
+
                     <div
                       className={[
                         "grid transition-all duration-500 ease-out",
@@ -140,7 +139,7 @@ export default function TrabajosCarousel() {
                         <p className="text-sm text-gray-700 leading-relaxed">
                           {trabajo.descripcion}
                         </p>
-                    
+
                         {trabajo.url && (
                           <a
                             href={trabajo.url}
@@ -153,7 +152,6 @@ export default function TrabajosCarousel() {
                         )}
                       </div>
                     </div>
-                      
                   </div>
                 </div>
               </article>
