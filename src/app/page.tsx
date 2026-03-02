@@ -9,7 +9,9 @@ import Contacto from "@/sections/home/Contacto";
 import { createMetadata } from "@/lib/seo";
 
 export const metadata = createMetadata({
-  title: "Inicio | Nuvra Technologies",
+  title: "Desarrollo de Software y Sistemas a Medida | Nuvra Technologies",
+  description:
+    "Creamos software a medida, sistemas web y soluciones tecnológicas modernas para empresas que buscan crecer en Argentina.",
   path: "/",
 });
 

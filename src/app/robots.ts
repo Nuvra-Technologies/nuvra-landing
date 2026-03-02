@@ -7,5 +7,6 @@ export default function robots() {
             },
         ],
         sitemap: "https://nuvratg.com/sitemap.xml",
+        host: "https://nuvratg.com",
     };
 }

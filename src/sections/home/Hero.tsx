@@ -22,19 +22,20 @@ export default function Hero() {
                     
                     <FadeIn>
                         <h1 className="text-[34px] md:text-[46px] lg:text-[64px] font-semibold leading-[1.1] tracking-tight">
-                            Impulsamos tu negocio con
+                            Desarrollo de software a medida
                             <span className="block bg-gradient-to-r from-[#29285e] to-[#156bb3] bg-clip-text text-transparent">
-                                software a medida
+                                para hacer crecer tu negocio
                             </span>
-                            para vender más y ahorrar tiempo
+                            en Argentina
                         </h1>
                     </FadeIn>
 
                     <FadeIn delay={0.1}>
                         <p className="text-neutral-500 max-w-xl mx-auto lg:mx-0 text-[17px] md:text-lg leading-relaxed">
-                            Creamos <strong>sitios web</strong> profesionales, <strong>landing pages</strong> que convierten
-                            y <strong>sistemas a medida</strong> que automatizan procesos y hacen crecer
-                            tu facturación sin complicaciones.
+                            Somos una <strong>empresa de desarrollo de software</strong> que crea 
+                            <strong> sistemas web</strong>, <strong>aplicaciones empresariales</strong> 
+                            y <strong>soluciones digitales a medida</strong> para optimizar procesos 
+                            y aumentar la rentabilidad de tu empresa.
                         </p>
                     </FadeIn>
 

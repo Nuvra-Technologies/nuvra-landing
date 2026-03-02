@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 const SITE_NAME = "Nuvra Technologies";
 const SITE_URL = "https://nuvratg.com";
 const DEFAULT_DESCRIPTION =
-    "Startup especializada en soluciones digitales modernas, escalables y orientadas a resultados.";
+    "Desarrollamos software a medida, sistemas web y soluciones digitales escalables para empresas en Argentina.";
 
 const DEFAULT_OG_IMAGE = "/og/og-image.png";
 

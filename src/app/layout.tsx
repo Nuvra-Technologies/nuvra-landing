@@ -10,9 +10,9 @@ import { generateOrganizationSchema } from "@/lib/schema/organization";
 import { generateWebsiteSchema } from "@/lib/schema/website";
 
 export const metadata: Metadata = createMetadata({
-  title: "Nuvra Technologies | Soluciones digitales modernas",
+  title: "Nuvra Technologies | Desarrollo de Software en Argentina",
   description:
-    "Creamos soluciones digitales modernas, escalables y orientadas a resultados para empresas que buscan crecer.",
+    "Desarrollamos software a medida, sistemas web y soluciones digitales escalables para empresas en Argentina.",
   path: "/",
 });
 

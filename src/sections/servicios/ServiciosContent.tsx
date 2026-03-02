@@ -17,14 +17,16 @@ export default function ServiciosContent() {
 
           <FadeIn delay={0.1}>
             <h1 className="text-4xl md:text-5xl font-semibold leading-tight mt-2">
-              Soluciones digitales para hacer crecer tu negocio
+              Servicios de desarrollo de software y sistemas web en Argentina
             </h1>
           </FadeIn>
 
           <FadeIn delay={0.2}>
             <p className="mt-6 text-neutral-500 text-lg leading-relaxed">
-              Ayudamos a pymes a digitalizar procesos, vender online y automatizar
-              su operación mediante software simple, escalable y seguro.
+              Ofrecemos servicios de <strong>desarrollo de software a medida</strong>,
+              sistemas web y soluciones digitales para ayudar a pymes en Argentina
+              a digitalizar procesos, vender online y automatizar su operación
+              de forma simple, escalable y segura.
             </p>
           </FadeIn>
         </div>

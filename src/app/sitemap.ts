@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const staticPages = staticRoutes.map((route) => ({
         url: `${baseUrl}${route}`,
         lastModified: new Date(),
+        priority: route === "" ? 1 : 0.7,
     }));
 
     const projectPages = trabajos.map((trabajo) => ({

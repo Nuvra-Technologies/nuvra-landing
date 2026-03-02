@@ -4,9 +4,9 @@ import { generateFaqSchema } from "@/lib/faqSchema";
 import { faqFull } from "@/data/faqs";
 
 export const metadata = createMetadata({
-    title: "Preguntas frecuentes | Nuvra",
+    title: "Preguntas frecuentes sobre desarrollo de software en Argentina | Nuvra Technologies",
     description:
-        "Respondemos las preguntas más frecuentes sobre nuestros servicios y forma de trabajo.",
+        "Resolvemos dudas sobre desarrollo de software a medida, sistemas web, costos, tiempos y proceso de trabajo en Argentina.",
     path: "/faq"
 });
 
