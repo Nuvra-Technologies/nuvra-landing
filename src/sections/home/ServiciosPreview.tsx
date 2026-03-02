@@ -83,17 +83,17 @@ function StickyCard({
         <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[500px] md:min-h-[560px]">
 
           {/* Texto a la izquierda */}
-          <div className="grid md:grid-cols-2 gap-10 items-center h-full p-10 md:p-14">
+          <div className="grid md:grid-cols-1 gap-10 items-center h-full p-10 md:p-14">
             <div>
-              <span className="text-sm font-semibold text-[#156bb3] uppercase tracking-wide">
+              <span className="text-sm md:text-lg font-semibold text-[#156bb3] uppercase tracking-wide">
                 {service.category}
               </span>
 
-              <h3 className="text-2xl md:text-3xl font-semibold mt-4">
+              <h3 className="text-2xl md:text-5xl font-semibold mt-4">
                 {service.title}
               </h3>
 
-              <p className="mt-6 text-neutral-600 leading-relaxed max-w-lg">
+              <p className="mt-6 text-neutral-600 md:text-lg leading-relaxed max-w-lg">
                 {service.description}
               </p>
             </div>
@@ -125,8 +125,8 @@ function StickyCard({
               right-[-60px]
               top-1/2
               -translate-y-1/2
-              w-[260px]
-              h-[260px]
+              w-[320px]
+              h-[320px]
               text-[#156bb3]
               opacity-[0.12]
             "
