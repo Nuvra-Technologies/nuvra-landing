@@ -1,8 +1,23 @@
 import { trabajos } from "@/data/works";
 import { notFound } from "next/navigation";
+import { createMetadata } from "@/lib/seo";
+
+export async function generateMetadata({ params }: Props) {
+    const { slug } = params;
+
+    const proyecto = trabajos.find((p) => p.slug === slug);
+
+    if (!proyecto) return {};
+
+    return createMetadata({
+        title: `${proyecto.titulo} | Caso de éxito | Nuvra Technologies`,
+        description: proyecto.descripcion,
+        path: `/proyectos/${slug}`,
+    });
+}
 
 type Props = {
-    params: Promise<{ slug: string }>;
+    params: { slug: string };
 };
 
 export async function generateStaticParams() {
@@ -12,7 +27,7 @@ export async function generateStaticParams() {
 }
 
 export default async function ProyectoPage({ params }: Props) {
-    const { slug } = await params;
+    const { slug } = params;
 
     const proyecto = trabajos.find(
         (p) => p.slug === slug

@@ -59,7 +59,7 @@ export default function Footer() {
           </Link>
 
           <Link
-            href="/preguntas-frecuentes"
+            href="/faq"
             className="text-neutral-600 hover:text-neutral-900 text-sm"
           >
             Preguntas frecuentes

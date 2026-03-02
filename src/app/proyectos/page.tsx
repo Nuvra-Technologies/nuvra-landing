@@ -2,10 +2,10 @@ import { createMetadata } from "@/lib/seo";
 import ProyectosSection from "@/sections/trabajos/Proyectos";
 
 export const metadata = createMetadata({
-    title: "Nuestros proyectos | Nuvra",
+    title: "Proyectos y casos de éxito | Nuvra Technologies",
     description:
-        "Explorá nuestras soluciones más recientes.",
-    path: "/por-que-elegirnos"
+        "Descubrí proyectos reales de desarrollo de software y sistemas web realizados por Nuvra Technologies.",
+    path: "/proyectos"
 });
 
 export default function PorQueElegirnosPage() {
