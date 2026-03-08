@@ -21,7 +21,7 @@ export default function Hero() {
                 <div className="flex flex-col gap-6 text-center lg:text-left">
                     
                     <FadeIn>
-                        <h1 className="text-[34px] md:text-[46px] lg:text-[64px] font-semibold leading-[1.1] tracking-tight">
+                        <h1 className="text-[34px] md:text-[46px] lg:text-[64px] font-semibold leading-tight tracking-tight">
                             Desarrollo de software a medida
                             <span className="block bg-gradient-to-r from-[#29285e] to-[#156bb3] bg-clip-text text-transparent">
                                 para hacer crecer tu negocio

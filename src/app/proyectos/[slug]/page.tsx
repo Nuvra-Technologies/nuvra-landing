@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { createMetadata } from "@/lib/seo";
 
 export async function generateMetadata({ params }: Props) {
-    const { slug } = params;
+    const { slug } = await params;
 
     const proyecto = trabajos.find((p) => p.slug === slug);
 
@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props) {
 }
 
 type Props = {
-    params: { slug: string };
+    params: Promise<{ slug: string }>;
 };
 
 export async function generateStaticParams() {
@@ -27,7 +27,7 @@ export async function generateStaticParams() {
 }
 
 export default async function ProyectoPage({ params }: Props) {
-    const { slug } = params;
+    const { slug } = await params;
 
     const proyecto = trabajos.find(
         (p) => p.slug === slug
