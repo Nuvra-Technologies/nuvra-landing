@@ -44,7 +44,6 @@ export default function HeroMockup() {
                         alt="Software en laptop"
                         width={520}
                         height={400}
-                        priority
                     />
                 </motion.div>
 

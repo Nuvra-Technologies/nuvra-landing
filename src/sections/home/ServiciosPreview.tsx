@@ -1,20 +1,18 @@
 "use client";
 
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
-import { useRef } from "react";
+import { useRef, memo } from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { servicesPreview } from "@/data/services";
 import { Service } from "@/types/service";
 
-function StickyCard({
+const StickyCard = memo(function StickyCard({
   service,
   index,
-  totalCards,
 }: {
   service: Service;
   index: number;
-  totalCards: number;
 }) {
   const cardRef = useRef<HTMLDivElement>(null);
 
@@ -23,10 +21,12 @@ function StickyCard({
     offset: ["start start", "end start"],
   });
 
+  // Suavizamos el valor con un spring en vez de mapear scroll -> scale en crudo.
+  // Esto evita los "saltos" que se perciben como lag cuando el scroll es rápido.
   const smoothProgress = useSpring(scrollYProgress, {
-    stiffness: 90,
-    damping: 25,
-    mass: 0.2
+    stiffness: 300,
+    damping: 40,
+    mass: 0.5,
   });
 
   const scale = useTransform(
@@ -35,7 +35,7 @@ function StickyCard({
     [1, 0.92 + index * 0.01]
   );
 
-  const stickyTop = 40 + index * 30;
+  const stickyTop = 48 + index * 20;
 
   return (
     <div
@@ -44,44 +44,29 @@ function StickyCard({
       style={{
         top: `${stickyTop}px`,
         zIndex: index + 1,
-        marginBottom: index < totalCards - 1 ? "0px" : "0px",
       }}
     >
       <motion.div
-        style={{ scale }}
-        className="relative rounded-2xl bg-neutral-50 border border-neutral-200 overflow-hidden shadow-xl backdrop-blur-[2px]"
+        style={{
+          scale,
+          willChange: "transform", // promueve la capa para que el scale no repinte todo
+        }}
+        className="relative rounded-2xl bg-neutral-50 border border-neutral-200 overflow-hidden shadow-xl"
       >
-
-        {/* Aura tornasolada */}
+        {/* Aura tornasolada - gradiente en vez de blur filter (mucho más barato) */}
         <div
-          className="
-            absolute
-            inset-0
-            pointer-events-none
-            rounded-2xl
-            opacity-[0.35]
-          "
-        >
-          <div
-            className={`
-              absolute
-              -top-32
-              -left-32
-              w-[400px]
-              h-[400px]
-              rounded-full
-              blur-3xl
-              ${
-                index % 2 === 0
-                  ? "bg-gradient-to-br from-[#29285e]/20 to-[#156bb3]/10"
-                  : "bg-gradient-to-br from-[#156bb3]/20 to-[#29285e]/10"
-              }
-            `}
-          />
-        </div>
-        
-        <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[500px] md:min-h-[560px]">
+          className={`
+            absolute -top-32 -left-32 w-[400px] h-[400px] rounded-full
+            opacity-[0.35] pointer-events-none
+            ${
+              index % 2 === 0
+                ? "bg-[radial-gradient(circle,rgba(41,40,94,0.25),rgba(21,107,179,0.08)_60%,transparent_75%)]"
+                : "bg-[radial-gradient(circle,rgba(21,107,179,0.25),rgba(41,40,94,0.08)_60%,transparent_75%)]"
+            }
+          `}
+        />
 
+        <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[500px] md:min-h-[560px]">
           {/* Texto a la izquierda */}
           <div className="grid md:grid-cols-1 gap-10 items-center h-full p-10 md:p-14">
             <div>
@@ -100,35 +85,13 @@ function StickyCard({
           </div>
         </div>
 
-        {/* Icono tipo fondo*/}
+        {/* Icono tipo fondo */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-
-          {/* Glow sutil */}
-          <div className="
-            absolute
-            right-[-80px]
-            top-1/2
-            -translate-y-1/2
-            w-[320px]
-            h-[320px]
-            bg-gradient-to-br
-            from-[#156bb3]/20
-            to-transparent
-            blur-3xl
-            opacity-40
-          " />
-
           {/* Icono */}
           <service.icon
             className="
-              absolute
-              right-[-60px]
-              top-1/2
-              -translate-y-1/2
-              w-[320px]
-              h-[320px]
-              text-[#156bb3]
-              opacity-[0.12]
+              absolute right-[-60px] top-1/2 -translate-y-1/2
+              w-[320px] h-[320px] text-[#156bb3] opacity-[0.12]
             "
             strokeWidth={1.2}
           />
@@ -136,13 +99,12 @@ function StickyCard({
       </motion.div>
     </div>
   );
-}
+});
 
 export default function ServiciosPreview() {
   return (
     <section className="relative py-32 bg-white">
       <div className="container mx-auto px-6 lg:px-0 max-w-6xl">
-
         <motion.h3
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -164,19 +126,12 @@ export default function ServiciosPreview() {
           empiezan a digitalizarse
         </motion.h2>
 
-        {/* Sticky cards */}
-        <div className="flex flex-col gap-10">
+        <div className="flex flex-col gap-6">
           {servicesPreview.map((service, i) => (
-            <StickyCard
-              key={service.title}
-              service={service}
-              index={i}
-              totalCards={servicesPreview.length}
-            />
+            <StickyCard key={service.title} service={service} index={i} />
           ))}
         </div>
 
-        {/* CTA */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

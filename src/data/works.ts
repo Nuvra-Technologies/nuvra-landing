@@ -96,4 +96,62 @@ export const trabajos: Works[] = [
             "Mejor control de presupuestos y stock",
         ],
     },
+
+    {
+        id: 3,
+        slug: "cmv-centro-medico",
+        titulo: "CMV Centro Médico",
+        categoria: "Landing institucional",
+
+        descripcion:
+            "Diseño y desarrollo de landing institucional para centro médico de Tucumán, orientada a generar confianza, facilitar el acceso a turnos, presentar sus especialidades y potenciar el alquiler de consultorios.",
+
+        imagen: "/images/works/mockup-hero-cmv.png",
+        mockupSlug: "/images/works/mockup-slug-cmv.png",
+        url: "https://www.cmvcorazondejesus.com/",
+
+        año: "2026",
+        cliente: "CMV Corazón de Jesús",
+        industria: "Salud / Centro Médico",
+
+        servicios: [
+            "UX/UI Design",
+            "Desarrollo Frontend",
+            "Arquitectura de información",
+            "SEO técnico",
+            "Datos estructurados Schema.org",
+            "Optimización de performance",
+            "Accesibilidad web",
+            "Responsive Design",
+        ],
+
+        tecnologias: [
+            "Next.js",
+            "TypeScript",
+            "Tailwind CSS",
+            "shadcn/ui",
+            "Motion",
+            "next/image",
+            "next/font",
+            "Vercel",
+        ],
+
+        desafio:
+            "CMV necesitaba profesionalizar su presencia digital y centralizar en un único sitio la información sobre sus especialidades, profesionales, estudios cardiovasculares y servicios. El proyecto debía atender dos objetivos comerciales principales: facilitar el acceso a turnos médicos y promocionar el alquiler de consultorios, además de transmitir confianza y fortalecer su presencia en Google.",
+
+        solucion:
+            "Se desarrolló una landing institucional moderna y responsive, con una arquitectura de información orientada tanto a pacientes como a profesionales de la salud. Se estructuraron páginas específicas para especialidades, información institucional, preguntas frecuentes y alquiler de consultorios, incorporando además optimización SEO técnica, datos estructurados, metadatos para redes sociales, sitemap, robots.txt, optimización de imágenes y criterios de accesibilidad.",
+
+        resultado:
+            "CMV cuenta con una presencia digital profesional que organiza y comunica de forma clara su propuesta de valor, facilita el acceso al sistema de turnos y presenta sus servicios y especialidades a pacientes y profesionales. La arquitectura del sitio está preparada para favorecer la indexación y el posicionamiento orgánico de sus principales servicios.",
+
+        impacto: [
+            "Mejora de la presencia digital institucional",
+            "Acceso directo al sistema de turnos",
+            "Mayor visibilidad de especialidades y estudios cardiovasculares",
+            "Promoción del alquiler de consultorios",
+            "Optimización técnica orientada a SEO y performance",
+            "Mejora de accesibilidad y experiencia responsive",
+        ],
+    },
 ];
